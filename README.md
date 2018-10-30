@@ -1,4 +1,4 @@
-How Cookie Flags Work
+How cookie flags work?
 ---
 
 CSRF attack and protection demo in node server.
@@ -48,7 +48,7 @@ Simulate attack and how to protect.
 
 1. Set cookie at `http://local.host:3333/`.
 1. Visit `http://sub.local.host:3333/form`.
-1. Overwrite cookie and submit form to server and response success is `true`.
+1. Overwrite cookie and submit form to server and respond success is `true`.
 
 Use the following flags to defend:
 
@@ -60,7 +60,7 @@ Use the following flags to defend:
 1. Set cookie at `http://local.host:3333/`.
 1. Visit `http://remote.host:3333/link`.
 1. Click link.
-1. Check out server console, there are two requests with cookie from remote.
+1. Go check out server console, requests of image and link are sent to server with third party cookie.
 
 Use the following flags to defend:
 
