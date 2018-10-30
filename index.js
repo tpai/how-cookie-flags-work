@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.options(cors());
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://sub.local.host:3333");
+  res.header("Access-Control-Allow-Origin", req.headers.origin);
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Credentials", "true");
   next();
@@ -74,7 +74,10 @@ app.get('/form', function(req, res) {
           method: 'POST',
           body: JSON.stringify({ token: tokenField.value }),
           credentials: 'include',
-          headers: { Accept: 'application/json', 'Content-Type': 'application/json' }
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+          },
         })
         .then(res => res.json())
         .then(json => {
