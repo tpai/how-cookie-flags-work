@@ -68,3 +68,9 @@ Use the following flags to defend:
     - None: All requests with third party cookie.
     - Lax: Only sync requests with third party cookie.
     - Strict: No third party cookie.
+
+## References
+
+- https://blog.techbridge.cc/2017/02/25/csrf-introduction/
+- http://www.cnblogs.com/ziyunfei/p/5637945.html
+- https://imququ.com/post/host-only-cookie.html
