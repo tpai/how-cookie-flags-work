@@ -41,6 +41,18 @@ app.get('/link', function(req, res) {
   res.send(`
     <a href="http://local.host:3333/get">Link</a>
     <img src="http://local.host:3333/get" />
+    <script>
+      fetch('http://local.host:3333/get', {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+      })
+      .then(res => res.json())
+      .then(console.log);
+    </script>
   `);
 });
 
