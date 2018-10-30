@@ -1,4 +1,4 @@
-SPA Double Submit Cookie
+How Cookie Flags Work
 ---
 
 CSRF attack and protection demo in node server.
